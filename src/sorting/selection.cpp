@@ -1,11 +1,15 @@
 #include <iostream>
 
-void selectionSort(int arr[], int n) {
-    for (int i = 0; i < n - 1; ++i) {
+void selectionSort(int arr[], int n)
+{
+    for (int i = 0; i < n - 1; ++i)
+    {
         // Find the index of the minimum element in the unsorted part
         int minIndex = i;
-        for (int j = i + 1; j < n; ++j) {
-            if (arr[j] < arr[minIndex]) {
+        for (int j = i + 1; j < n; ++j)
+        {
+            if (arr[j] < arr[minIndex])
+            {
                 minIndex = j;
             }
         }
@@ -14,12 +18,14 @@ void selectionSort(int arr[], int n) {
     }
 }
 
-int main() {
+int main()
+{
     int arr[] = {10, 34, 25, 22, 11};
     int n = sizeof(arr) / sizeof(arr[0]);
 
     std::cout << "Original array: ";
-    for (int i = 0; i < n; ++i) {
+    for (int i = 0; i < n; ++i)
+    {
         std::cout << arr[i] << " ";
     }
     std::cout << std::endl;
@@ -27,7 +33,8 @@ int main() {
     selectionSort(arr, n);
 
     std::cout << "Sorted array: ";
-    for (int i = 0; i < n; ++i) {
+    for (int i = 0; i < n; ++i)
+    {
         std::cout << arr[i] << " ";
     }
     std::cout << std::endl;
