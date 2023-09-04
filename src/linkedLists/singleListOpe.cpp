@@ -8,7 +8,8 @@ struct Node
     Node *next;
 };
 
-// Function to insert a new node at the beginning of the list
+// Function to insert a new node at the beginning 
+//of the list
 void insertAtBeginning(Node *&head, std::string value)
 {
     Node *newNode = new Node{value, head};
@@ -21,7 +22,7 @@ void deleteNode(Node *&head, std::string value)
     Node *current = head;
     Node *prev = nullptr;
 
-    while (current != nullptr)
+    while (current != nullptr)// value = xyz
     {
         if (current->data == value)
         {
