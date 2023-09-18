@@ -1,6 +1,5 @@
 #include <iostream>
 #include <vector>
-
 using namespace std;
 
 const int MAX_SIZE = 100; // Maximum size for the vector
@@ -22,7 +21,7 @@ public:
     {
         if (data.size() >= MAX_SIZE)
         {
-            cout << "Stack is full. Cannot push." << endl;
+            cout << "Stack overflow. Cannot push." << endl;
             return;
         }
         data.push_back(value); // Add value to the end of the data.
@@ -67,7 +66,7 @@ public:
 
 int main()
 {
-    Stack myStack;
+    Stack myStack; // data size = 100
 
     myStack.push(1);
     myStack.push(2);
@@ -86,27 +85,25 @@ int main()
     return 0;
 }
 
+// stack-trace
+//  void greet(string name) {
+//      cout << "hello, " << name << "!" << endl;
+//      greet2(name);
+//      cout << "getting ready to say bye..." << endl;
+//      bye();
+//  }
 
-//stack-trace
-void greet(string name) {
-    cout << "hello, " << name << "!" << endl;
-    greet2(name);
-    cout << "getting ready to say bye..." << endl;
-    bye();
-}
+// void greet2(string name) {
+//     cout << "how are you, " << name << "?" << endl;
+// }
 
-void greet2(string name) {
-    cout << "how are you, " << name << "?" << endl;
-}
+// void bye() {
+//     cout << "ok bye!" << endl;
+// }
 
-void bye() {
-    cout << "ok bye!" << endl;
-}
+// int main() {
+//     string name = "Abebe";
+//     greet(name);
 
-int main() {
-    string name = "Abebe";
-    greet(name);
-
-    return 0;
-}
-
+//     return 0;
+// }
