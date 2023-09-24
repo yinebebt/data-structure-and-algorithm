@@ -7,7 +7,7 @@ private:
     int front, rear, capacity, size;
 
 public:
-    Queue(int cap)
+    Queue(int cap) 
     {
         capacity = cap;
         arr = new int[capacity];
@@ -22,7 +22,7 @@ public:
     }
 
     // enqueue to add an element to the rear of the queue
-    void enqueue(int item)
+    void enqueue(int item) //10
     {
         if (isFull())
         {
