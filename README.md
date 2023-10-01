@@ -10,18 +10,18 @@ Here you can get exercise codes for basic topics on DSA including additional pro
 
 
 ## Usage
-- Clone the project to your local machine, open with vcode.
+- Clone the project to your local machine, open with vscode.
 - install c/c++ related extensions
-- Make sure to install exteranl libraries(only for the projects) like postgreql's c++ binding linrary-libpq.
+- Make sure to install external libraries(only for the projects) like postgreql's c++ binding linrary-libpq.
     - `sudo apt install libpq-dev`
-    - fix add /usr/include/postgresql into your configration
-    - Make sure you compile via specifying the linker as in:
+    - add `/usr/include/postgresql` into your c++ configration
+    - Make sure you compile via specifying linker as in:
         `g++ -o user src/projects/db/user.cpp -I/user/include/postgresql -lpq`
 
 ## Contributing
 Contributions are always welcome.
 
-## Authors and acknowledgment
+## Authors
  [Yinebeb T.](https://github.com/Yinebeb-01)
 
 ## References
