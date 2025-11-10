@@ -22,7 +22,7 @@ void deleteNode(Node *&head, std::string value)
     Node *current = head;
     Node *prev = nullptr;
 
-    while (current != nullptr)// value = xyz
+    while (current != nullptr)
     {
         if (current->data == value)
         {
@@ -114,7 +114,5 @@ int main()
         delete temp;
     }
 
-    std::cout << "List after deletion:"
-              << head << "\n";
     return 0;
 }

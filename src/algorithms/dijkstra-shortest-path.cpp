@@ -8,15 +8,13 @@ using namespace std;
 const int INF = numeric_limits<int>::max();
 
 // Define a structure to represent edges and their weights
-struct Edge
-{
+struct Edge{
     int to, weight;
     Edge(int _to, int _weight) : to(_to), weight(_weight) {}
 };
 
 // Define a function to perform Dijkstra's algorithm
-vector<int> dijkstra(vector<vector<Edge>> &graph, int start)
-{
+vector<int> dijkstra(vector<vector<Edge>> &graph, int start){
     int n = graph.size();
     vector<int> dist(n, INF);
     vector<bool> visited(n, false);
@@ -76,8 +74,7 @@ int main()
     vector<int> shortest_distances = dijkstra(graph, start);
 
     cout << "Shortest distances from vertex " << start << " to all other vertices:" << endl;
-    for (int i = 0; i < n; ++i)
-    {
+    for (int i = 0; i < n; ++i){
         cout << "Vertex " << i << ": " << shortest_distances[i] << endl;
     }
 

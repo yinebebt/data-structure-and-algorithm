@@ -1,10 +1,11 @@
 #include <iostream>
+#include <vector>
 
-void selectionSort(int arr[], int n)
+void selectionSort(std::vector<int>& arr)
 {
+    int n = arr.size();
     for (int i = 0; i < n - 1; ++i)
     {
-        // Find the index of the minimum element in the unsorted part
         int minIndex = i;
         for (int j = i + 1; j < n; ++j)
         {
@@ -13,29 +14,27 @@ void selectionSort(int arr[], int n)
                 minIndex = j;
             }
         }
-        // Swap the found minimum element with the first element of the unsorted part
         std::swap(arr[i], arr[minIndex]);
     }
 }
 
 int main()
 {
-    int arr[] = {10, 34, 25, 22, 11};
-    int n = sizeof(arr) / sizeof(arr[0]);
+    std::vector<int> arr = {10, 34, 25, 22, 11};
 
     std::cout << "Original array: ";
-    for (int i = 0; i < n; ++i)
+    for (int val : arr)
     {
-        std::cout << arr[i] << " ";
+        std::cout << val << " ";
     }
     std::cout << std::endl;
 
-    selectionSort(arr, n);
+    selectionSort(arr);
 
     std::cout << "Sorted array: ";
-    for (int i = 0; i < n; ++i)
+    for (int val : arr)
     {
-        std::cout << arr[i] << " ";
+        std::cout << val << " ";
     }
     std::cout << std::endl;
 

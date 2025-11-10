@@ -1,20 +1,17 @@
-#include <bits/stdc++.h>
-using namespace std;
+#include <iostream>
 
-class Node {
+class Node
+{
 public:
 	int data;
 	Node* left;
 	Node* right;
-	// Val is the key or the value that
-	// has to be added to the data part
+
 	Node(int val)
 	{
 		data = val;
-		// Left and right child for node
-		// will be initialized to null
-		left = NULL;
-		right = NULL;
+		left = nullptr;
+		right = nullptr;
 	}
 };
 
@@ -25,7 +22,7 @@ int main()
 	/* following is the tree after above statement
 	1
 	/ \
-	NULL NULL
+	nullptr nullptr
 	*/
 	root->left = new Node(2);
 	root->right = new Node(3);
@@ -35,7 +32,7 @@ int main()
 	 / \
 	2   3
 	/ \ / \
-	NULL NULL NULL NULL
+	nullptr nullptr nullptr nullptr
 	*/
 	root->left->left = new Node(4);
 	/* 4 becomes left child of 2
@@ -43,9 +40,16 @@ int main()
 	/ \
 	2	 3
 	/ \ / \
-	4 NULL NULL NULL
+	4 nullptr nullptr nullptr
 	/ \
-	NULL NULL
+	nullptr nullptr
 	*/
+
+	// Clean up memory
+	delete root->left->left;
+	delete root->left;
+	delete root->right;
+	delete root;
+
 	return 0;
 }

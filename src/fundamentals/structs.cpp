@@ -48,7 +48,7 @@ int main()
     people[2] = {"Bob", 35};
 
     // Access and print the data,
-    //const: cannot be used to change the memory it points to.
+    // const: cannot be used to change the memory it points to.
     for (const Person &p : people)
     {
         std::cout << "Name: " << p.name << ", Age: " << p.age << std::endl;
